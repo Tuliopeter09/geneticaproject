@@ -1,0 +1,152 @@
+
+
+
+{% extends 'music/base.html' %}
+{% block title %}Bem-vindo{% endblock %}
+{% block register_active %}active{% endblock %}
+{% load staticfiles %}
+{% block body %}
+
+
+
+
+<!-- Overlay for fixed sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-default open" role="navigation">
+    <!-- Sidebar header -->
+    <div >
+        <!-- Top bar -->
+        
+    <center>    
+    Bem vindo {{ user.username }} <BR>
+    {{ user.email }} 
+        </center>            
+
+        <!-- Sidebar brand name -->
+        
+    </div>
+        
+<BR><BR><BR>
+
+
+
+
+        <!-- Sidebar brand name -->
+        
+    </div>
+
+    <!-- Sidebar navigation -->
+    <ul class="nav sidebar-nav">
+        
+        <li>
+            <a href="#">
+                <i class="sidebar-icon md-inbox"></i>
+                Apresentação
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon md-star"></i>
+                Etapa 01
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon md-star"></i>
+                Etapa 02
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon md-star"></i>
+                Etapa 03
+            </a>
+        </li>
+        <li class="divider"></li>
+       
+        
+        
+       
+    </ul>
+    <!-- Sidebar divider -->
+    <!-- <div class="sidebar-divider"></div> -->
+    
+    <!-- Sidebar text -->
+    <!--  <div class="sidebar-text">Text</div> -->
+</aside>
+
+<div class="wrapper">
+    <!-- Sidebar Constructor -->
+
+
+
+<p>1. (Ueg 2015) Em uma população hipotética de estudantes universitários, 36% dos indivíduos são considerados
+míopes. Sabendo-se que esse fenótipo <br>é associado a um alelo recessivo "a", as frequências genotípicas podem
+ser calculadas pela fórmula de Hardy-Weinberg. Nesse contexto, as frequências<br> de AA, Aa e aa correspondem a</p>
+
+a) <input type="radio" name="one">58%, 24% e 18%<br>
+b) <input type="radio" name="one">40%, 24% e 36%<br>
+c) <input type="radio" name="one">34%, 48% e 18%<br>
+d) <input type="radio" name="one">16%, 48% e 36%<br>
+
+<br><br>
+
+
+
+
+
+
+
+<a href="/static/music/Citologia.pdf/{{material.thumbnail}}">Artigo sobre Genética</a><br>
+
+
+<td class="desc"><label>Description:<input type="text" name="desc"></label></td>
+<td class="tags"><label>Tags:<input type="text" name="tag"></label></td>
+<td><label>Public:<input type="radio" name="pri" value="1"></label>
+<label>Private:<input type="radio" name="pri" value="0"></label></td>
+
+<br><br>
+
+
+
+
+
+
+
+
+
+<p>1. (Ueg 2015) Em uma população hipotética de estudantes universitários, 36% dos indivíduos são considerados
+míopes. Sabendo-se que esse fenótipo <br>é associado a um alelo recessivo "a", as frequências genotípicas podem
+ser calculadas pela fórmula de Hardy-Weinberg. Nesse contexto, as frequências<br> de AA, Aa e aa correspondem a</p>
+
+a) <input type="radio" name="two">58%, 24% e 18%<br>
+b) <input type="radio" name="two">40%, 24% e 36%<br>
+c) <input type="radio" name="two">34%, 48% e 18%<br>
+d) <input type="radio" name="two">16%, 48% e 36%<br>
+
+<br><br>
+
+<p>1. (Ueg 2015) Em uma população hipotética de estudantes universitários, 36% dos indivíduos são considerados
+míopes. Sabendo-se que esse fenótipo <br>é associado a um alelo recessivo "a", as frequências genotípicas podem
+ser calculadas pela fórmula de Hardy-Weinberg. Nesse contexto, as frequências<br> de AA, Aa e aa correspondem a</p>
+
+a) <input type="radio" name="three">58%, 24% e 18%<br>
+b) <input type="radio" name="three">40%, 24% e 36%<br>
+c) <input type="radio" name="three">34%, 48% e 18%<br>
+d) <input type="radio" name="three">16%, 48% e 36%<br>
+
+    <br><br><br><br><br><br>
+    
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}
+

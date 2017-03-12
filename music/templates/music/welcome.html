@@ -1,0 +1,583 @@
+{% extends 'music/base.html' %}
+{% block title %}Bem-vindo{% endblock %}
+{% block register_active %}active{% endblock %}
+{% load staticfiles %}
+{% block body %}
+
+
+
+
+<html>
+
+<head>
+       <link href="{% static 'music/landing-page.css' %}" rel="stylesheet">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+    <style>
+        
+
+
+
+        body{
+    background: #eee url({% static 'music/images/pssa-science-grade-8-test-prep-practice_233026_large.jpg' %}) ;
+  
+    
+
+        }
+   
+html,body{
+    position: relative;
+    height: 100%;
+}
+
+        /* Global */
+ a.list-group-item {
+    height:auto;
+    min-height:220px;
+}
+a.list-group-item.active small {
+    color:#F0F8FF;
+}
+.stars {
+    margin:20px auto 1px;    
+}
+
+
+
+img { max-width:100%; }
+
+a {
+    -webkit-transition: all 150ms ease;
+    -moz-transition: all 150ms ease;
+    -ms-transition: all 150ms ease;
+    -o-transition: all 150ms ease;
+    transition: all 150ms ease; 
+    }
+    
+a:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
+    filter: alpha(opacity=50); /* IE7 */
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+
+
+body{
+    border-top:0;
+    background-color: #00EE76;
+    
+    
+}
+
+.thumbnails li> .fff .caption { 
+    background:#fff !important; 
+    padding:10px
+}
+
+/* Page Header */
+.page-header {
+    background: #f9f9f9;
+    margin: -30px -40px 40px;
+    padding: 20px 40px;
+    border-top: 4px solid #ccc;
+    color: #999;
+    text-transform: uppercase;
+}
+    
+.page-header h3 {
+    line-height: 0.88rem;
+    color: #000;
+}
+
+ul.thumbnails { 
+    margin-bottom: 0px;
+}
+
+
+
+/* Thumbnail Box */
+.caption h4 {
+    color: #444;
+}
+
+.caption p {  
+    color: #999;
+}
+
+
+
+/* Carousel Control */
+.control-box {
+    text-align: right;
+    width: 100%;
+}
+.carousel-control{
+    background: #666;
+    border: 0px;
+    border-radius: 0px;
+    display: inline-block;
+    font-size: 34px;
+    font-weight: 200;
+    line-height: 18px;
+    opacity: 0.5;
+    padding: 4px 10px 0px;
+    position: static;
+    height: 30px;
+    width: 15px;
+}
+
+
+
+/* Mobile Only */
+@media (max-width: 767px) {
+    .page-header, .control-box {
+        text-align: center;
+    } 
+}
+@media (max-width: 479px) {
+    .caption {
+        word-break: break-all;
+    }
+}
+
+
+li { list-style-type:none;}
+
+::selection { background: #ff5e99; color: #FFFFFF; text-shadow: 0; }
+::-moz-selection { background: #ff5e99; color: #FFFFFF; }
+
+
+blockquote{
+    border-left:none
+}
+
+.quote-badge{
+    background-color: rgba(0, 0, 0, 0.2);   
+}
+
+.quote-box{
+    
+    overflow: hidden;
+    margin-top: -50px;
+    padding-top: -100px;
+    border-radius: 17px;
+    background-color: #4ADFCC;
+    margin-top: 20px;
+    color:white;
+    width: 225px;
+    box-shadow: 2px 2px 2px 2px #E0E0E0;
+    
+}
+
+.quotation-mark{
+    
+    margin-top: -10px;
+    font-weight: bold;
+    font-size:100px;
+    color:white;
+    font-family: "Times New Roman", Georgia, Serif;
+    
+}
+
+.quote-text{
+    
+    font-size: 19px;
+    margin-top: -65px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.block-update-card {
+  height: 100%;
+  border: 1px #FFFFFF solid;
+  width: 380px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 0;
+  padding: 0;
+  box-shadow: 1px 1px 8px #d8d8d8;
+  background-color: #FFFFFF;
+}
+.block-update-card .h-status {
+  width: 100%;
+  height: 7px;
+  background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
+}
+.block-update-card .v-status {
+  width: 5px;
+  height: 80px;
+  float: left;
+  margin-right: 5px;
+  background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
+}
+.block-update-card .update-card-MDimentions {
+  width: 80px;
+  height: 80px;
+}
+.block-update-card .update-card-body {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.block-update-card .update-card-body h4 {
+  color: #737373;
+  font-weight: bold;
+  font-size: 13px;
+}
+.block-update-card .update-card-body p {
+  color: #737373;
+  font-size: 12px;
+}
+.block-update-card .card-action-pellet {
+  padding: 5px;
+}
+.block-update-card .card-action-pellet div {
+  margin-right: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #dddddd;
+}
+.block-update-card .card-action-pellet div:hover {
+  color: #999999;
+}
+.block-update-card .card-bottom-status {
+  color: #a9a9aa;
+  font-weight: bold;
+  font-size: 14px;
+  border-top: #e0e0e0 1px solid;
+  padding-top: 5px;
+  margin: 0px;
+}
+.block-update-card .card-bottom-status:hover {
+  background-color: #dd4b39;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+/*
+Creating a block for social media buttons
+*/
+.card-body-social {
+  font-size: 30px;
+  margin-top: 10px;
+}
+.card-body-social .git {
+  color: black;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.card-body-social .twitter {
+  color: #19C4FF;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.card-body-social .google-plus {
+  color: #DD4B39;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.card-body-social .facebook {
+  color: #49649F;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.card-body-social .linkedin {
+  color: #007BB6;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.music-card {
+  background-color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+
+
+
+
+
+</head>
+
+<body class="fundo">
+
+<br><br><br><br><br><br>
+
+<div class="container">
+<div class="col-xs-12">
+
+    
+        
+    <div class="carousel slide" id="myCarousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                    <ul class="thumbnails">
+                        <li class="col-sm-3">
+                            <div class="fff">
+                                <div class="thumbnail">
+                                    <a href="#"><img src="{% static 'music/images/People-studying.jpg' %}" alt=""></a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Conteúdos de Citologia e Introdução à Genética</h4>
+                                    <p>Leia todos os artigos e realize exercicíos na plataforma frequentemente</p>
+                                    <a class="btn btn-mini" href="#">» Read More</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+                            <div class="fff">
+                                <div class="thumbnail">
+                                    <a href="#"><img src="{% static 'music/images/stem-education.jpg' %}" alt=""></a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Acompanhe os artigos sobre genética</h4>
+                                    <p>Fique atualizado sobre temas do cotidiano e adquira conhecimentos!</p>
+                                    <a class="btn btn-mini" href="#">» Read More</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+                            <div class="fff">
+                                <div class="thumbnail">
+                                    <a href="#"><img src="{% static 'music/images/o-SMILING-STUDENTS-facebook.jpg' %}" alt=""></a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Não deixa de assistir as vídeo-aulas</h4>
+                                    <p>Os videos de Introdução à Genética e Herança Genética já estão no ar!</p>
+                                    <a class="btn btn-mini" href="#">» Read More</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+                            <div class="fff">
+                                <div class="thumbnail">
+                                    <a href="#"><img src="{% static 'music/images/o-SMILING-STUDENTS-facebook.jpg' %}" alt=""></a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Não deixa de assistir as vídeo-aulas</h4>
+                                    <p>Os videos de Introdução à Genética e Herança Genética já estão no ar!</p>
+                                    <a class="btn btn-mini" href="#">» Read More</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+              </div><!-- /Slide1 --> 
+            
+            
+        </div>
+        
+       
+       
+       <!-- /.control-box -->   
+                              
+    </div><!-- /#myCarousel -->
+        
+</div><!-- /.col-xs-12 -->          
+
+</div><!-- /.container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center>
+
+<img src="{% static 'music/images/10.png' %}">
+
+</center>
+
+
+<br><br><br><br>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div >
+        
+        <div>
+          <a href="#" class="list-group-item active">
+                <div class="media col-md-3">
+                    <figure class="pull-left"><BR>
+                        <img class="media-object img-rounded img-responsive"  src="{% static 'music/images/Introdução_à_Genética_First_Frame.png' %}" >
+                    </figure>
+                </div>
+                <div class="col-md-6"><BR>
+                    <h4 class="list-group-item-heading"> Inicie na Etapa 01 </h4>
+                    <p class="list-group-item-text"> Nesta etapa serão vistos conceitos iniciais de citologia, como DNA e RNA, daremos uma introdução è Genética; também será abordado sobre herança genética, definição de sexo e a primeira lei de Mendel.
+                    </p><br>
+                    <h5>Instrutores:</h5>
+                    <i>Dhecyeny Alves, Jéssica Ingrid, Karolaine Alves e Tulio Vital</i>
+
+                </div>
+                <div class="col-md-3 text-center">
+                    <h2> 06 <small> Video aulas </small></h2>
+                    <button type="button" class="btn btn-default btn-lg btn-block"> Começe agora! </button>
+                    <div class="stars">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <p> DeepSubject de 4.0 <small> / </small> 5 </p>
+                </div>
+          </a>
+          
+          
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<BR><BR><BR>
+
+<div class="container">
+    <div class="row">
+        <div >
+        
+        <div>
+          <a href="#" class="list-group-item active">
+                <div class="media col-md-3">
+                    <figure class="pull-left">
+                        <img class="media-object img-rounded img-responsive"  src="{% static 'music/images/Introdução_à_Genética_First_Frame.png' %}" >
+                    </figure>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="list-group-item-heading"> Inicie na Etapa 02 </h4>
+                    <p class="list-group-item-text"> Nesta etapa será visto o conceito de heredogramas e sua linguagem simbólica. Seguidamente haverá uma introdução aos tipos sanguineos e as formas de cruzamentos entre eles.
+                    </p><br>
+                    <h5>Instrutores:</h5>
+                    <i>Dhecyeny Alves, Jéssica Ingrid, Karolaine Alves e Tulio Vital</i>
+
+                </div>
+                <div class="col-md-3 text-center">
+                    <h2> 04 <small> Video aulas </small></h2>
+                    <button type="button" class="btn btn-default btn-lg btn-block"> Começe agora! </button>
+                    <div class="stars">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <p> DeepSubject de 4.5 <small> / </small> 5 </p>
+                </div>
+          </a>
+          
+          
+        </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+     
+
+
+
+
+     
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
